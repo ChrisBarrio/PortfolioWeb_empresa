@@ -429,7 +429,7 @@ header .menu_burger {
   position: absolute;
   -webkit-transition: all 1s;
   transition: all 1s;
-  bottom: 5%;
+  top: 5%;
   left: 5%;
   padding: 3rem;
   -webkit-transform: translate(-5%, -5%);
@@ -615,7 +615,93 @@ footer .links a:hover {
           transform: scale(1.1);
 }
 
-@media (max-width: 481px) {
+.form {
+  background-color: var(--main-color);
+  display: block;
+  text-align: center;
+  border-radius: 30% 70% 70% 30% / 30% 68% 32% 70%;
+}
+
+.form h3 {
+  position: relative;
+  color: var(--black);
+  padding: 2rem 0;
+  font-weight: 800;
+  font-size: var(--FontSize-xl);
+}
+
+.form h3::after {
+  position: absolute;
+  bottom: 20%;
+  left: 49%;
+  -webkit-transform: translate(-20%, -49%);
+          transform: translate(-20%, -49%);
+  content: '';
+  width: 4rem;
+  height: .2rem;
+  background-color: var(--black);
+}
+
+.form p {
+  font-size: var(--FontSize-m);
+  padding: 2rem 0;
+}
+
+.form .container_form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+  width: 100%;
+}
+
+.form .container_form form {
+  width: 30%;
+}
+
+.form .container_form form div {
+  width: 100%;
+  padding: .5rem 0;
+  text-align: start;
+  font-size: var(--FontSize-s);
+}
+
+.form .container_form form div input {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.form .container_form form div label {
+  text-transform: uppercase;
+}
+
+.form .container_form form div textarea {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.form .container_form .btn_form input {
+  padding: 1rem;
+  background-color: var(--white);
+  border-radius: 1rem;
+}
+
+.form .container_form .btn_form:hover input {
+  background-color: var(--main-color);
+  color: var(--white);
+  border: 2px solid var(--black);
+  font-weight: 700;
+}
+
+@media (max-width: 480px) {
   html {
     font-size: 45.5%;
     scroll-behavior: smooth;
@@ -853,6 +939,69 @@ footer .links a:hover {
     font-size: var(--FontSize-m);
     padding: 2rem;
   }
+  .our_portfolio {
+    text-align: center;
+  }
+  .our_portfolio h3 {
+    position: relative;
+    color: var(--main-color);
+    padding: 2rem 0;
+    font-weight: 800;
+    font-size: var(--FontSize-xl);
+  }
+  .our_portfolio h3::after {
+    position: absolute;
+    bottom: 20%;
+    left: 49%;
+    -webkit-transform: translate(-20%, -49%);
+            transform: translate(-20%, -49%);
+    content: '';
+    width: 4rem;
+    height: .2rem;
+    background-color: var(--main-color);
+  }
+  .our_portfolio p {
+    font-size: var(--FontSize-m);
+    padding: 4rem 0;
+  }
+  .our_portfolio .container_games {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(400px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    padding: 4rem 6rem;
+    position: relative;
+    /* Visible texto */
+  }
+  .our_portfolio .container_games figure {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    /* Invisible texto */
+  }
+  .our_portfolio .container_games figure img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .our_portfolio .container_games figure figcaption {
+    position: absolute;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    top: 10%;
+    left: 20%;
+    -webkit-transform: translate(-10%, -20%);
+            transform: translate(-10%, -20%);
+    opacity: 0;
+  }
+  .our_portfolio .container_games figure:hover > figcaption {
+    display: block;
+    opacity: 1;
+  }
+  .our_portfolio .container_games figure:hover > img {
+    opacity: .2;
+  }
   .review .swiper {
     width: 100%;
     height: 100%;
@@ -913,6 +1062,79 @@ footer .links a:hover {
   .review .swiper .swiper-button-next,
   .review .swiper .swiper-button-prev {
     display: none;
+  }
+  .form {
+    background-color: var(--main-color);
+    display: block;
+    text-align: center;
+    border-radius: 30% 70% 70% 30% / 30% 68% 32% 70%;
+  }
+  .form h3 {
+    position: relative;
+    color: var(--black);
+    padding: 2rem 0;
+    font-weight: 800;
+    font-size: var(--FontSize-xl);
+  }
+  .form h3::after {
+    position: absolute;
+    bottom: 20%;
+    left: 49%;
+    -webkit-transform: translate(-20%, -49%);
+            transform: translate(-20%, -49%);
+    content: '';
+    width: 4rem;
+    height: .2rem;
+    background-color: var(--black);
+  }
+  .form p {
+    font-size: var(--FontSize-m);
+    padding: 2rem 0;
+  }
+  .form .container_form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .form .container_form form {
+    width: 100%;
+  }
+  .form .container_form form div {
+    width: 100%;
+    padding: .5rem 0;
+    text-align: start;
+    font-size: var(--FontSize-s);
+  }
+  .form .container_form form div input {
+    width: 100%;
+    border-radius: 1rem;
+  }
+  .form .container_form form div label {
+    text-transform: uppercase;
+  }
+  .form .container_form form div textarea {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+  .form .container_form .btn_form input {
+    padding: 1rem;
+    background-color: var(--white);
+    border-radius: 1rem;
+  }
+  .form .container_form .btn_form:hover input {
+    background-color: var(--main-color);
+    color: var(--white);
+    border: 2px solid var(--black);
+    font-weight: 700;
   }
   footer {
     display: -webkit-box;
@@ -1209,7 +1431,7 @@ footer .links a:hover {
     position: absolute;
     -webkit-transition: all 1s;
     transition: all 1s;
-    bottom: 30%;
+    top: 30%;
     left: 22%;
     opacity: 0;
   }
@@ -1280,6 +1502,80 @@ footer .links a:hover {
   .review .swiper .swiper-button-next,
   .review .swiper .swiper-button-prev {
     display: none;
+  }
+  .form {
+    background-color: var(--main-color);
+    display: block;
+    text-align: center;
+    border-radius: 30% 70% 70% 30% / 30% 68% 32% 70%;
+  }
+  .form h3 {
+    position: relative;
+    color: var(--black);
+    padding: 2rem 0;
+    font-weight: 800;
+    font-size: var(--FontSize-xl);
+  }
+  .form h3::after {
+    position: absolute;
+    bottom: 20%;
+    left: 49%;
+    -webkit-transform: translate(-20%, -49%);
+            transform: translate(-20%, -49%);
+    content: '';
+    width: 4rem;
+    height: .2rem;
+    background-color: var(--black);
+  }
+  .form p {
+    font-size: var(--FontSize-m);
+    padding: 2rem 0;
+  }
+  .form .container_form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 2rem;
+    width: 100%;
+  }
+  .form .container_form form {
+    width: 60%;
+  }
+  .form .container_form form div {
+    width: 100%;
+    padding: .5rem 0;
+    text-align: start;
+    font-size: var(--FontSize-s);
+  }
+  .form .container_form form div input {
+    width: 100%;
+    border-radius: 1rem;
+  }
+  .form .container_form form div label {
+    text-transform: uppercase;
+  }
+  .form .container_form form div textarea {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+  .form .container_form .btn_form input {
+    padding: 1rem;
+    background-color: var(--white);
+    border-radius: 1rem;
+  }
+  .form .container_form .btn_form:hover input {
+    background-color: var(--main-color);
+    color: var(--white);
+    border: 2px solid var(--black);
+    font-weight: 700;
   }
   footer {
     display: -webkit-box;

@@ -359,7 +359,7 @@ header{
                 text-align: center;
                 position: absolute; 
                 transition: all 1s;
-                bottom: 5%;left: 5%;
+                top: 5%;left: 5%;
                 padding: 3rem;
                 transform: translate(-5%, -5%);
                 opacity: 0;
@@ -505,9 +505,82 @@ footer{
     }
 }
 
+//---------- CONTACT US -----------
+
+.form{  
+    background-color: var(--main-color);
+    display: block;
+    text-align: center;
+    border-radius: 30% 70% 70% 30% / 30% 68% 32% 70% ;
+    & h3{
+        position: relative;
+        color:var(--black);
+        padding: 2rem 0;
+        font-weight: 800;
+        font-size: var(--FontSize-xl);
+    }
+    & h3::after{
+        position: absolute;
+        bottom: 20%;left: 49%;
+        transform: translate(-20%,-49%);
+        content: '';
+        width: 4rem;
+        height: .2rem;
+        background-color: var(--black);
+    }
+    & p{
+        font-size: var(--FontSize-m);
+        padding: 2rem 0;
+    }
+    & .container_form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+        width: 100%;
+        & form{
+            width: 30%;
+            & div{
+                width: 100%;
+                padding: .5rem 0;
+                text-align: start;
+                font-size: var(--FontSize-s);
+                
+                & input{
+                    width: 100%;
+                    border-radius: 1rem;
+                }
+                & label{
+                    text-transform: uppercase;
+                }
+                & textarea{
+                    width: 100%;
+                    padding: 1rem;
+                    border-radius: 1rem;
+                }
+            }
+        }
+        & .btn_form{
+            & input{
+            padding: 1rem;
+            background-color: var(--white);
+            border-radius: 1rem;
+            }            
+        }
+        & .btn_form:hover{
+            & input{
+                background-color: var(--main-color);
+                color: var(--white);
+                border: 2px solid var(--black);
+                font-weight: 700;                
+                } 
+        }
+    }
+}
+
 //-----------------RESPONSIVE--------------------//
 // ---- MOBILE ----
-@media (max-width: 481px) {
+@media (max-width: 480px) {
     html{
         font-size: 45.5%;
         scroll-behavior: smooth;
@@ -700,6 +773,65 @@ footer{
             }
         }
     }
+    .our_portfolio{
+        text-align: center;
+        & h3{
+            position: relative;
+            color: var(--main-color);
+            padding: 2rem 0;
+            font-weight: 800;
+            font-size: var(--FontSize-xl);
+        }
+        & h3::after{
+            position: absolute;
+            bottom: 20%;left: 49%;
+            transform: translate(-20%,-49%);
+            content: '';
+            width: 4rem;
+            height: .2rem;
+            background-color: var(--main-color);
+        }
+        & p{
+            font-size: var(--FontSize-m);
+            padding: 4rem 0;
+        }
+        & .container_games{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            padding: 4rem 6rem;
+            position: relative;
+            & figure{
+                width: 100%;
+                height: 100%;
+                position: relative;
+                overflow: hidden;
+                & img{
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+                }
+                
+                /* Invisible texto */
+                & figcaption {
+                    position: absolute; 
+                    transition: all 1s;
+                    top: 10%;left: 20%;
+                    transform: translate(-10%, -20%);
+                    opacity: 0;
+                }
+    
+            }
+                /* Visible texto */
+            & figure:hover > figcaption {
+                display: block;
+                opacity: 1;
+            }
+            figure:hover > img {
+                opacity: .2;
+            }
+        }
+    }
+    
     .review{
         & .swiper {
             width: 100%;
@@ -757,6 +889,75 @@ footer{
             display: none;
         }
             
+        }
+    }
+    .form{  
+        background-color: var(--main-color);
+        display: block;
+        text-align: center;
+        border-radius: 30% 70% 70% 30% / 30% 68% 32% 70% ;
+        & h3{
+            position: relative;
+            color:var(--black);
+            padding: 2rem 0;
+            font-weight: 800;
+            font-size: var(--FontSize-xl);
+        }
+        & h3::after{
+            position: absolute;
+            bottom: 20%;left: 49%;
+            transform: translate(-20%,-49%);
+            content: '';
+            width: 4rem;
+            height: .2rem;
+            background-color: var(--black);
+        }
+        & p{
+            font-size: var(--FontSize-m);
+            padding: 2rem 0;
+        }
+        & .container_form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            & form{
+                width: 100%;
+                & div{
+                    width: 100%;
+                    padding: .5rem 0;
+                    text-align: start;
+                    font-size: var(--FontSize-s);
+                    
+                    & input{
+                        width: 100%;
+                        border-radius: 1rem;
+                    }
+                    & label{
+                        text-transform: uppercase;
+                    }
+                    & textarea{
+                        width: 100%;
+                        padding: 1rem;
+                        border-radius: 1rem;
+                    }
+                }
+            }
+            & .btn_form{
+                & input{
+                padding: 1rem;
+                background-color: var(--white);
+                border-radius: 1rem;
+                }            
+            }
+            & .btn_form:hover{
+                & input{
+                    background-color: var(--main-color);
+                    color: var(--white);
+                    border: 2px solid var(--black);
+                    font-weight: 700;                
+                    } 
+            }
         }
     }
     footer{
@@ -1002,7 +1203,7 @@ footer{
                 & figcaption {
                     position: absolute; 
                     transition: all 1s;
-                    bottom: 30%;left: 22%;
+                    top: 30%;left: 22%;
                     opacity: 0;
                 }
     
@@ -1074,6 +1275,76 @@ footer{
             display: none;
         }
             
+        }
+    }
+    .form{  
+        background-color: var(--main-color);
+        display: block;
+        text-align: center;
+        border-radius: 30% 70% 70% 30% / 30% 68% 32% 70% ;
+        & h3{
+            position: relative;
+            color:var(--black);
+            padding: 2rem 0;
+            font-weight: 800;
+            font-size: var(--FontSize-xl);
+        }
+        & h3::after{
+            position: absolute;
+            bottom: 20%;left: 49%;
+            transform: translate(-20%,-49%);
+            content: '';
+            width: 4rem;
+            height: .2rem;
+            background-color: var(--black);
+        }
+        & p{
+            font-size: var(--FontSize-m);
+            padding: 2rem 0;
+        }
+        & .container_form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+            width: 100%;
+            & form{
+                width: 60%;
+                & div{
+                    width: 100%;
+                    padding: .5rem 0;
+                    text-align: start;
+                    font-size: var(--FontSize-s);
+                    
+                    & input{
+                        width: 100%;
+                        border-radius: 1rem;
+                    }
+                    & label{
+                        text-transform: uppercase;
+                    }
+                    & textarea{
+                        width: 100%;
+                        padding: 1rem;
+                        border-radius: 1rem;
+                    }
+                }
+            }
+            & .btn_form{
+                & input{
+                padding: 1rem;
+                background-color: var(--white);
+                border-radius: 1rem;
+                }            
+            }
+            & .btn_form:hover{
+                & input{
+                    background-color: var(--main-color);
+                    color: var(--white);
+                    border: 2px solid var(--black);
+                    font-weight: 700;                
+                    } 
+            }
         }
     }
     footer{
